@@ -21,6 +21,10 @@ body {
   font-family: "Barlow Semi Condensed", serif;
 }
 
+.testimonial-sec {
+    margin: 89px 0px 40px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
