@@ -1,0 +1,234 @@
+:root {
+  /*==== colors =====*/
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: var(--Lightgrayishblue);
+  font-family: "Barlow Semi Condensed", serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding-block: 4.5rem;
+  padding-inline: 1.5rem;
+}
+
+.card:first-of-type {
+  background-color: var(--Moderateviolet);
+}
+
+.card:nth-of-type(2) {
+  background-color: var(--Verydarkgrayishblue);
+}
+.card:nth-of-type(3) {
+  background-color: var(--White);
+}
+.card:nth-of-type(4) {
+  background-color: var(--Verydarkblackishblue);
+}
+.card:nth-of-type(5) {
+  background-color: var(--White);
+}
+
+.card:first-of-type {
+    background-color: var(--Moderateviolet);
+    img {
+      border-radius: 50%;
+      border: 2px solid hsl(263, 74%, 63%);
+      /* width: 33px;
+      height: 33px; */
+    }
+  }
+
+img {
+  border-radius: 50%;
+
+  width: 29px;
+    height: 29px;
+}
+
+header{
+    display: flex;
+    gap: 1rem;
+}
+
+.user-data{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-data p {
+    color: var(--White);
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.user-data span {
+    color: var(--White);
+    font-size: 12px;
+    font-weight: 100;
+    opacity: 50%;
+}
+
+.card-body {
+    p:first-of-type {
+      color: var(--White);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    p:last-of-type {
+      font-size: 13px;
+      color: var(--White);
+      opacity: 75%;
+      line-height: 1.4;
+    }
+  }
+
+  .card:nth-of-type(3),
+.card:nth-of-type(5) {
+  .user-data {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .user-data p {
+    color: var(--Verydarkblackishbluee);
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+  .user-data span {
+    color: var(--Verydarkblackishbluee);
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .card-body {
+    p:first-of-type {
+      color: var(--Verydarkblackishbluee);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+    p:last-of-type {
+      font-size: 13px;
+      color: var(--Verydarkblackishbluee);
+      opacity: 75%;
+
+      line-height: 1.4;
+    }
+  }
+}
+
+.card {
+  border-radius: 9px;
+  padding-inline: 2rem;
+  padding-block: 1.55rem;
+}
+
+@media (min-width: 1400px) {
+
+    body{
+        
+    }
+
+    .testimonial-sec{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 263px);
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+        max-width: 1080px;
+        padding-block: 0;
+        padding-inline: 0;
+    }
+
+  .card:nth-of-type(1) {
+    grid-column: 1/3;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+  }
+
+  .card:nth-of-type(2) {
+  }
+
+  .grid-container .card:nth-of-type(3) {
+    .card-body {
+      p {
+        padding-inline-end: 10px;
+        line-height: 1.2;
+      }
+      p:last-of-type {
+        font-size: 12.9px;
+        line-height: 1.45;
+        padding-inline-end: 0;
+      }
+    }
+  }
+
+  .card:nth-of-type(4) {
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+
+  .card:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1/3;
+  }
+  .card {
+    border-radius: 8px;
+    padding-inline: 2rem;
+    padding-block: 1.5rem;
+  }
+
+  .card:nth-of-type(4) {
+    .card-body {
+      p:first-of-type {
+        font-weight: 500;
+        line-height: 1.18;
+        margin-bottom: 1.45rem;
+      }
+      p:last-of-type {
+        padding-inline-end: 0;
+        opacity: 75%;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 786px) and (max-width: 1399px) {
+    .grid-container{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            } 
+
+}
